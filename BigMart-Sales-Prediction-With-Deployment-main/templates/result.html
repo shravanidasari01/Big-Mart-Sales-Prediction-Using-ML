@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result {
+            background: #fff;
+            color: #333;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .result p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .prediction {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #28a745;
+            background: linear-gradient(to right, #fdc830, #f37335);
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #28a745, 0 0 20px #fdc830, 0 0 30px #fdc830;
+            }
+            100% {
+                text-shadow: 0 0 10px #fdc830, 0 0 20px #fdc830, 0 0 30px #fdc830, 0 0 40px #f37335, 0 0 50px #f37335;
+            }
+        }
+
+        .result button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .result button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Prediction Result</h2>
+        <p>The predicted sales amount is:</p>
+        <p class="prediction">${{ prediction }}</p>
+        <button onclick="window.location.href='/'">Go Back</button>
+    </div>
+</body>
+</html>
+
